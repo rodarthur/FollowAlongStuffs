@@ -1,13 +1,16 @@
 
-window.addEventListener('load', stuffloaded);
+// window.addEventListener('load', stuffloaded);
 
-function stuffloaded() {
+// function stuffloaded() {
+//   });
+
+  
+// };
+
+
   var app = new Vue({
     el: '#app',
     data: {
       message: 'Hello Vue!'
     }
   });
-
-  
-};
