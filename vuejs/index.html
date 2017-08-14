@@ -9,6 +9,16 @@
   <title>Document</title>
 </head>
 <body>
+
+  <div id="app">
+    <app-nav></app-nav>
+    <app-view>
+      <app-sidebar></app-sidebar>
+      <app-content></app-content>
+    </app-view>
+  </div>
+
+
   <h1>Wow! It's Vuejs !!</h1>
   <p>Declarative Rendering  <a href="http://anvaka.github.io/sj/compare/">Cool link on it</a></p>
 
@@ -34,7 +44,7 @@
 
   <button id="app3seenswitch">abc</button>
 
-
+<H2>MOAR DIRECTIVES!  MOAR</H2>
 
   <br />
   <div id="app-4">
@@ -45,19 +55,45 @@
     </ol>
   </div>
 
+  <h1>user input v-on</h1>
+
+<div id="app-5">
+  <p>{{ message }}</p>
+  <button v-on:click="reverseMessage">Reverse Message</button>
+</div>
+
+<p>All dom manipulations are handled by vue vue VUE VUE VUE </p>
 
 
+<div id="app-6">
+  <p>{{ message }}</p>
+  <input v-model="message">
+</div>
 
 
+<ol>
+  <!-- Create an instance of the todo-item component -->
+  <todo-item></todo-item>
+</ol>
 
+<div id="app-7">
+  <ol>
+    <!--
+      now we provide each todo-tiem with the todo object
+      it's representing, so that its content can be dynamic.
+      we also need to provide each component with a 'key',
+      which will be explained later.
 
-
-
-
-
-
-
-
+      -->
+    <todo-item
+      v-for="item in groceryList"
+      v-bind:todo="item"
+      v-bind:key="item.id">
+    </todo-item>
+  </ol>
+  <input id="tdmessage" v-model="tdmessage">
+  <button id="tdbutton">Click here to add</button>
+</div>
 
   <script src="vue@2.4.2.js"></script> 
   <script src="script.js"></script>
